@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const port = process.env.PORT || 8001
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
@@ -18,6 +19,6 @@ app.use('/show',showRoute)
 app.use('/genre',genreRoute)
 app.use('/comment',commentRoute)
 
-app.listen(8000,()=>{
-    console.log(`listening on 8000`)
+app.listen(port,()=>{
+    console.log(`listening on ${port}`)
 })

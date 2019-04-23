@@ -1,3 +1,3 @@
-const dbAddr = ('postgres://localhost/tvwatchlistapp')
+const dbAddr = (process.env.DATABASE_URL || 'postgres://localhost/tvwatchlistapp')
 
 module.exports = {dbAddr}
